@@ -1,29 +1,229 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-    <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-    <!--
-        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
-        Para obtener m�s detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Ev2Simulacro</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Conectando con el dispositivo</p>
-                <p class="event received">El dispositivo est� preparado</p>
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Simulacro examen EV02</title>
+
+</head>
+
+<body>
+
+    <!--Index-->
+    <div id="page" data-role="page">
+        <div data-role="header">
+            <h1>Parque Natural </h1>
+            <h1>Bardenas Reales de Navarra </h1>
+        </div>
+        <div data-role="content">
+            <img src="images/panoramica.jpg" />
+            <br /><br />
+            <ul data-role="listview">
+                <li><a href="#page1">Bienvenida</a></li>
+                <li><a href="#page2">Especies</a></li>
+                <li><a href="#page3">Reservas</a></li>
+                <li><a href="#page4">Galería</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Cuatrovientos</h4>
+        </div>
+    </div>
+
+    <!--Bienvenida PAGE 1-->
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>Bienvenidos</h1>
+        </div>
+        <div data-role="content">
+            <p>Las Bardenas Reales de Navarra (en euskera Nafarroako Errege Bardeak) son un paraje natural semidesértico de 41 845 ha que se extiende por el sureste de Navarra (España) y tres localidades aragonesas.</p>
+            <p>Sus suelos se componen de arcillas, yesos y areniscas que han sido erosionados por el agua y el viento, creando formas sorprendentes entre las que destacan los barrancos, las mesetas de estructura tabular y los cerros solitarios, llamados cabezos.</p>
+            <p>Las Bardenas carecen de núcleos urbanos, su vegetación es muy escasa y las múltiples corrientes de agua que surcan el territorio tienen un caudal marcadamente irregular, permaneciendo secos la mayor parte del año.</p>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4><a href="#page" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-top">Inicio</a></h4>
+        </div>
+    </div>
+
+    <!--Especies PAGE 2-->
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>Especies</h1>
+        </div>
+        <div data-role="content">
+            <p>Estos son algunos de los habitantes del parque:</p>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Aves esteparias:</h3>
+                    <p>Las aves esteparias están representadas por una colonia muy diversa, entre las que destacan las siguientes especies: la avutarda, casi desaparecida; sisón, en las Bardenas hay unas veinte parejas.</p>
+                    <p><img src="images/aves-esteparias.jpg" width="290" height="350" alt="" /></p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Reptiles:</h3>
+                    <p>Se han detectado once especies diferentes, aunque podrían ser trece las que hay, como el quelonio, el galápago leproso, el lagarto ocelado, la lagartija ibérica, la lagartija colilarga, la lagartija cenicienta, el eslizón tridáctilo y el eslizón ibérico (sin confirmar).</p>
+                    <p><img src="images/reptiles.jpg" width="290" height="350" alt="" /></p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Anfibios:</h3>
+                    <p>Entre los anfibios se encuentran unas ocho especies. Están el tritón jaspeado, tritón palmeado, sapo común, sapo corredor, sapo de espuelas, sapillo moteado, sapillo pintojo común y rana verde.</p>
+                    <p><img src="images/rana-verde.jpg" width="290" height="350" alt="" /></p>
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+        <div data-role="footer" data-position="fixed">
+            <h4><a href="#page" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-top">Inicio</a></h4>
+        </div>
+    </div>
+
+    <!--Reservas PAGE 3-->
+    <div data-role="page" id="page3">
+        <div data-role="header">
+            <h1>Reservas</h1>
+        </div>
+        <div data-role="content">
+            <p>La visita normal se realiza por la pista de tierra que en un recorrido circular te permite ver los más característicos rincones de la zona de La Blanca rodeando el Polígono de Tiro de la Aviación.</p>
+            <p>En tu visita en coche, has de cumplir determinadas normas, como la velocidad limitada a 40 kilómetros por hora, o no poder detenerte nada más que en las zonas habilitadas y señalizadas como aparcamiento.</p>
+            <h2>Horarios y reservas</h2>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Visitas con guía:</h3>
+                    <p>Horarios:</p>
+                    <div class="tablas ui-grid-a">
+                        <div class="tablas ui-block-a">Temporada de Verano</div>
+                        <div class="tablas ui-block-b">Temporada de Invierno</div>
+                        <div class="tablas ui-block-a">
+                            <p>
+                                10:0
+                                0-13:00
+                            </p>
+                            <p>16:00-19:00</p>
+                        </div>
+                        <div class="tablas ui-block-b">
+                            <p>&nbsp;</p>
+                            <p class="horarios">11:00-14:00</p>
+                        </div>
+                    </div>
+                    <p>Tarifas:</p>
+                    <div class="tablas ui-grid-c">
+                        <div class="tablas ui-block-a">Individual:</div>
+                        <div class="tablas ui-block-b">Grupos:</div>
+                        <div class="tablas ui-block-c">Individual:</div>
+                        <div class="tablas ui-block-d">Grupos:</div>
+                        <div class="tablas ui-block-a">5 &#8364; persona</div>
+                        <div class="tablas ui-block-b">3 &#8364; persona</div>
+                        <div class="tablas ui-block-c">4 &#8364; persona</div>
+                        <div class="tablas ui-block-d">2 &#8364; persona</div>
+                    </div>
+                </div>
+
+                <div data-role="collapsible">
+                    <h3>Aula educativa (sólo grupos):</h3>
+                    <div class="tablas ui-grid-b">
+                        <div class="tablas ui-block-a"></div>
+                        <div class="tablas ui-block-b">Temporada de Verano</div>
+                        <div class="tablas ui-block-c">Temporada de Invierno</div>
+                        <div class="ui-block-a">Horarios:</div>
+                        <div class="tablas ui-block-b">
+                            <p>9:00-10:00</p>
+                            <p>15:00-16:00</p>
+                        </div>
+                        <div class="tablas ui-block-c">
+                            <p>&nbsp;</p>
+                            <p>10:00-11:00</p>
+                        </div>
+                        <div class="tablas ui-block-a">Tarifas</div>
+                        <div class="tablas ui-block-b">25 &#8364;</div>
+                        <div class="tablas ui-block-c">25 &#8364;</div>
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Contacto</h3>
+                    <p>Si estás pensando visitar el parque con un grupo, por favor, rellena este formulario:</p>
+                    <form class="tablas">
+                        <div>
+                            <label>Nombre:</label>
+                            <input type="text" name="textinput" id="textinput" value="" />
+                        </div>
+
+                        <div>
+                            <label>Correo electrónico:</label>
+                            <input type="email" name="email" id="email" value="" />
+                        </div>
+                        <div>
+                            <label>Fecha:</label>
+                            <input type="date" name="date" id="date" value="" />
+                        </div>
+                        <div>
+                            Número de personas:
+                            <input type="range" name="slider" id="slider" value="0" min="0" max="100" />
+                        </div>
+                        <div>
+                            <fieldset data-role="controlgroup">
+                                <legend>Edad del grupo:</legend>
+                                <input type="radio" name="radio0" id="radio1_0" value="" />
+                                <label for="radio1_0">De 5 a 8 años</label>
+                                <input type="radio" name="radio1" id="radio1_1" value="" />
+                                <label for="radio1_1">De 9 a 14 años</label>
+                                <input type="radio" name="radio2" id="radio1_2" value="" />
+                                <label for="radio1_2">De 15 a 18 años</label>
+                                <input type="radio" name="radio3" id="radio1_3" value="" />
+                                <label for="radio1_3">Adultos</label>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <fieldset>
+                                <legend></legend>
+                                <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+                                <label for="checkbox1_0">Deseamos asistir al aula educativa (sólo niños).</label>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <label>Observaciones:</label>
+                            <textarea name="textarea" id="textarea" rows="8" cols="40"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar" />
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4><a href="#page" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-top">Inicio</a></h4>
+        </div>
+    </div>
+    <div data-role="page" id="page4">
+        <div data-role="header">
+            <h1>Galería Fotográfica</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Foto 1</h3>
+                    <p><img src="images/foto1.jpg" alt="" /></p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Foto 2</h3>
+                    <p><img src="images/foto2.jpg" alt="" /></p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Foto 3</h3>
+                    <p><img src="images/foto3.jpg" alt="" /></p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h4><a href="#page" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-top">Inicio</a></h4>
+        </div>
+    </div>
+</body>
 </html>
